@@ -1,0 +1,162 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CC103___Practice_Testbench__01
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        //Combo box for BSCS 1ST Semester
+        private void BSCS_SubjCode()
+        {
+            //Checks if BSCS 1st Sem (First Year)
+            if (combo_Course.Text == "BSCS" && combo_Year.Text == "1ST YEAR" && combo_Semester.Text == "1ST SEMESTER")
+            {
+                //Change Combo Box
+
+                combo_Code.Items.Clear();
+                combo_Code.Items.Add("GE1");
+                combo_Code.Items.Add("GE2");
+                combo_Code.Items.Add("GE3");
+                combo_Code.Items.Add("CC101");
+                combo_Code.Items.Add("CC102");
+                combo_Code.Items.Add("NSTP1");
+                combo_Code.Items.Add("PE1");
+
+                switch (combo_Code.Text)
+                {
+                    //System Looks here for Description
+                    case "GE1":
+                        text_Code.Text = "GE1";
+                        text_Description.Text = "Communication Skills";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "GE2":
+                        text_Code.Text = "GE2";
+                        text_Description.Text = "Akademikong Filipino";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "GE3":
+                        text_Code.Text = "GE3";
+                        text_Description.Text = "College Algebra";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "CC101":
+                        text_Code.Text = "CC101";
+                        text_Description.Text = "Introduction to Programming";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "CC102":
+                        text_Code.Text = "CC102";
+                        text_Description.Text = "Fundamentals of Programming";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "NSTP1":
+                        text_Code.Text = "NSTP1";
+                        text_Description.Text = "National Service Training Program 1";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "PE1":
+                        text_Code.Text = "PE1";
+                        text_Description.Text = "Physical Education 1";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    //Catch
+                    default:
+                        text_Description.Text = "ERROR!";
+                        break;
+                }
+            }
+
+            //Checks if BSCS 1st Sem (Second Year)
+            if (combo_Course.Text == "BSCS" && combo_Year.Text == "1ST YEAR" && combo_Semester.Text == "2ND SEMESTER")
+            {
+                //Change Combo Box
+
+                combo_Code.Items.Clear();
+                combo_Code.Items.Add("GE4");
+                combo_Code.Items.Add("GE5");
+                combo_Code.Items.Add("GE6");
+                combo_Code.Items.Add("CC103");
+                combo_Code.Items.Add("DS101");
+                combo_Code.Items.Add("NSTP2");
+                combo_Code.Items.Add("PE2");
+
+                switch (combo_Code.Text)
+                {
+                    //System Looks here for Description
+                    case "GE4":
+                        text_Code.Text = "GE4";
+                        text_Description.Text = "Communication Skills";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "GE5":
+                        text_Code.Text = "GE5";
+                        text_Description.Text = "Akademikong Filipino";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "GE6":
+                        text_Code.Text = "GE6";
+                        text_Description.Text = "Art Appreciation";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "CC103":
+                        text_Code.Text = "CC103";
+                        text_Description.Text = "Intermediate Programming";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "DS101":
+                        text_Code.Text = "DS101";
+                        text_Description.Text = "Discrete Structures";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "NSTP2":
+                        text_Code.Text = "NSTP2";
+                        text_Description.Text = "National Service Training Program 2";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    case "PE2":
+                        text_Code.Text = "PE2";
+                        text_Description.Text = "Physical Education 2";
+                        text_Teacher.Text = "Professor [Name Here]";
+                        break;
+
+                    //Catch
+                    default:
+                        text_Description.Text = "ERROR!";
+                        break;
+                }
+            }
+        }
+
+        private void combo_Code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BSCS_SubjCode();
+        }
+    }
+}
